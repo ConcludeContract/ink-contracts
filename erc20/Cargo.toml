@@ -26,17 +26,20 @@ crate-type = [
     # Used for normal contract Wasm blobs.
     "cdylib",
     # Used for ABI generation.
-    "rlib",
+    #"rlib",
 ]
 
 [features]
 default = ["std"]
 std = [
+    "ink_primitives/std",
+    "ink_metadata",
     "ink_metadata/std",
     "ink_env/std",
     "ink_storage/std",
-    "ink_primitives/std",
+    "ink_lang/std",
     "scale/std",
+    "scale-info",
     "scale-info/std",
 ]
 ink-as-dependency = []
