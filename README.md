@@ -1,7 +1,7 @@
 # ink-contracts
 WebAssembly based smart contracts using the Rust programming language
 
-[ink! Smart contracts Tutorial](https://substrate.dev/substrate-contracts-workshop/#/)
+[ink! Smart contracts Tutorial](https://docs.substrate.io/tutorials/smart-contracts/)
 
 [ink! Docs](https://paritytech.github.io/ink-docs/)
 
