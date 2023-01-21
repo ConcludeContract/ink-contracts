@@ -52,8 +52,7 @@ mod ownable {
         fn it_works() {
             let mut ownable = Ownable::new();
 
-            let accounts = ink_env::test::default_accounts::<ink_env::DefaultEnvironment>()
-                .expect("Cannot get accounts");
+            let accounts = ink_env::test::default_accounts::<ink_env::DefaultEnvironment>();
 
             assert_eq!(ownable.owner(), accounts.alice);
 
