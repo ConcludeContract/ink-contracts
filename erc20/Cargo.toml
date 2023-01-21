@@ -3,41 +3,33 @@ name = "erc20"
 version = "0.1.0"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
 description = "ERC20 contract"
-edition = "2018"
+edition = "2021"
 license = "GPL-3.0"
 
 [dependencies]
-ink_primitives = { version = "3.0.0-rc3", default-features = false }
-ink_metadata = { version = "3.0.0-rc3", default-features = false, features = ["derive"], optional = true }
-ink_env = { version = "3.0.0-rc3", default-features = false }
-ink_storage = { version = "3.0.0-rc3", default-features = false }
-ink_lang = { version = "3.0.0-rc3", default-features = false }
+ink_primitives = { version = "3.4.0", default-features = false }
+ink_metadata = { version = "3.4.0", default-features = false, features = ["derive"], optional = true }
+ink_env = { version = "3.4.0", default-features = false }
+ink_storage = { version = "3.4.0", default-features = false }
+ink_lang = { version = "3.4.0", default-features = false }
 
-scale = { package = "parity-scale-codec", version = "2.0", default-features = false, features = ["derive"] }
-scale-info = { version = "0.6", default-features = false, features = ["derive"], optional = true }
-
-# Should be removed once bitvecto-rs/bitvec#105 is resolved
-funty = "=1.1.0"
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
 
 [lib]
 name = "erc20"
 path = "lib.rs"
-crate-type = [
-    # Used for normal contract Wasm blobs.
-    "cdylib"
-]
+crate-type = ["cdylib"]
 
 [features]
 default = ["std"]
 std = [
     "ink_primitives/std",
-    "ink_metadata",
     "ink_metadata/std",
     "ink_env/std",
     "ink_storage/std",
     "ink_lang/std",
     "scale/std",
-    "scale-info",
     "scale-info/std",
 ]
 ink-as-dependency = []
